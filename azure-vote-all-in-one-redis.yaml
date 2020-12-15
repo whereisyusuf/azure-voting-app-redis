@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: azure-vote-back
+  annotations: 
+    fluxcd.io/automated: "true"
 spec:
   replicas: 1
   selector:
@@ -35,6 +37,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: azure-vote-front
+  annotations: 
+    fluxcd.io/automated: "true"
 spec:
   replicas: 1
   selector:
